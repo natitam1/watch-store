@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../../assets/logo.png";
 import { FaCaretDown } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
+import DarkMode from "./DarkMode";
 
 const Menu = [
   {
@@ -34,7 +35,7 @@ const DropDownLinks = [
 const Navbar = () => {
   return (
     <>
-      <div className="w-full bg-white dark:bg-black">
+      <div className="shadow-md w-full bg-white dark:bg-gray-900 duration-200 relative z-40">
         <div className="container py-3 md:py-0">
           <div className="flex items-center justify-between">
             <div>
@@ -48,8 +49,10 @@ const Navbar = () => {
             </div>
             {/* Menu Section */}
             <div className="flex items-center justify-between gap-2">
-              <div>Dark Mode</div>
-              <ul className="flex items-center gap-4">
+              <div>
+                <DarkMode />
+              </div>
+              <ul className="hidden md:flex items-center gap-4">
                 {Menu.map((menu) => (
                   <li key={menu.id}>
                     <a
@@ -72,7 +75,7 @@ const Navbar = () => {
                     </span>
                   </a>
                   {/* Drop Down Menu */}
-                  <div className="absolute -left-9 z-[9999] hidden w-[150px] group-hover:block bg-white rounded-md shadow-md p-2">
+                  <div className="absolute -left-9 z-[9999] hidden w-[150px] group-hover:block bg-white dark:bg-gray-800 dark:text-white rounded-md shadow-md p-2">
                     <ul className="space-y-4">
                       {DropDownLinks.map((link) => (
                         <li
