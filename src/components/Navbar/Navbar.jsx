@@ -41,7 +41,10 @@ const Navbar = () => {
             <div>
               {/* Logo Section */}
               <div>
-                <a href="#" className="flex items-center text-2xl sm:text-3xl">
+                <a
+                  href="#"
+                  className="flex items-center text-2xl sm:text-3xl gap-2"
+                >
                   <img src={Logo} alt="logo" className="w-10" />
                   <span className="font-bold">Watch</span> Store
                 </a>
