@@ -48,7 +48,7 @@ const Navbar = () => {
               </div>
             </div>
             {/* Menu Section */}
-            <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center justify-between gap-2 lg:gap-8">
               <div>
                 <DarkMode />
               </div>
